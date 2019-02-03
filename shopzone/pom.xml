@@ -8,14 +8,25 @@
   <name>shopzone Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+    <!-- junit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
+    <!-- spring -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>4.3.6.RELEASE</version>
+</dependency>
+    
   </dependencies>
   <build>
+ 
+  
     <finalName>shopzone</finalName>
   </build>
 </project>

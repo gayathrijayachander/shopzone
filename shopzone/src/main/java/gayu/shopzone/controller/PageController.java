@@ -11,7 +11,6 @@ public class PageController {
 
 @RequestMapping(value = {"/","/home","/index"})	
 
-
 	public ModelAndView index()
 	
 	{

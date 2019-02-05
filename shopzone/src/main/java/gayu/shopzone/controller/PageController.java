@@ -1,6 +1,5 @@
 package gayu.shopzone.controller;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -16,8 +15,13 @@ public class PageController {
 	{
 	
 	ModelAndView mv = new ModelAndView("page");
-	mv.addObject("greeting","welcome to spring");
+	mv.addObject("hello","welcome to spring");
 	return mv;
 	
 	}
+
+
 }
+
+
+

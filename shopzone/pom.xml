@@ -9,6 +9,16 @@
 	<name>shopzone Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
+	
+	<!-- linking -->
+	
+	<dependency>
+  <groupId>gayu</groupId>
+  <artifactId>shopbackend</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+	</dependency>
+	
 		<!-- junit -->
 		<dependency>
 			<groupId>junit</groupId>

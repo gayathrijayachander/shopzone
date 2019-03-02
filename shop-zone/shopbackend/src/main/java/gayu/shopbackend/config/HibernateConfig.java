@@ -33,13 +33,13 @@ public class HibernateConfig {
 	
 	dataSource.setDriverClassName(DATABASE_DRIVER);
 	dataSource.setUrl(DATABASE_URL);
+	
 	dataSource.setUsername(DATABASE_USERNAME);
 	dataSource.setPassword(DATABASE_PASSWORD);
 	
 	return dataSource;
 	}
 	
-
 	@Bean
 	
 	public SessionFactory getSessionFactory(DataSource dataSource) {
@@ -49,7 +49,6 @@ public class HibernateConfig {
 		builder.addProperties(getHibernateProperties());
 		
 		builder.scanPackages("gayu.shopbackend.dto");
-		
 		
 		return builder.buildSessionFactory();
 		
@@ -65,9 +64,6 @@ public class HibernateConfig {
 	    properties.put("hibernate.Show_sql","true");
 	    properties.put("hibernate.format_sql","true");
 	    
-	
-		
-		
 		return properties;
 	}
 		

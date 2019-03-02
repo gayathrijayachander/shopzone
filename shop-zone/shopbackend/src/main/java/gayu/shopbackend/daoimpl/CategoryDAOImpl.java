@@ -13,13 +13,14 @@ import gayu.shopbackend.dto.category;
 
 @Repository("categoryDAO")
 
+
 public class CategoryDAOImpl implements CategoryDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-	
 	private static List<category> categories = new ArrayList<category>();
+	
 
 	static {
 		category category = new category();
@@ -51,7 +52,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 	}
 
 	public List<category> list() {
-		// TODO Auto-generated method stub
+		
 		return categories;
 	}
 
@@ -67,22 +68,23 @@ public class CategoryDAOImpl implements CategoryDAO {
 		}
 
 		return null;
-
 	}
-
-@Transactional
-
-public boolean add(category category) {
+	
+	@Override
+	
+	@Transactional
+	
+	public boolean add(category category) {
 
 		try {
-sessionFactory.getCurrentSession().persist(category);
+			// add the category to the database table
+			sessionFactory.getCurrentSession().persist(category);
 			return true;
-		} 
-		catch (Exception ex) {
-
+		} catch (Exception ex) {
+			
 			ex.printStackTrace();
 			return false;
+			
 		}
-		
-	}
+}
 }

@@ -43,6 +43,16 @@ public class category {
 		this.active = active;
 	}
 	
+	
+	
+	@Override
+	public String toString() {
+		return "category [id=" + id + ", name=" + name + ", description=" + description + ", imageURL=" + imageURL
+				+ ", active=" + active + "]";
+	}
+
+
+
 	/**
 	*pivate fields
 	*/
